@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سباق الأذكار</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container"> 
+        <div class="container">
+                <header>
+                    <h1 class="title">سباق الأذكار</h1>
+                    <p>تمرين يسّرع أصابعك .. وينعش قلبك بالذكر</p>
+                </header>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-value" id="wpmStat">0</div>
+                        <div class="stat-label">الكلمة/الثانية</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="accuracyStat">0%</div>
+                        <div class="stat-label">الدقة</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="charsStat">0</div>
+                        <div class="stat-label">عدد الحروف</div>
+                    </div>
+                </div>
+                <div class="timer" id="timer">1:00</div>
+                <div class="text-display" id="textDisplay">
+                    سبحان الله و بحمده
+                </div>
+                <div class="input-section">
+                    <input 
+                        type="text" 
+                        class="input-field"
+                        id="inputField"
+                        placeholder="ابدأ بكتابة الذكر هنا"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        spellcheck="false"
+                    >
+                </div>
+                <div class="controls">
+                    <button class="btn btn-primary" id="restartBtn">ذكر أخر </button>
+                    <button class="btn btn-secondary" id="newTextBtn">ذكر جديد</button>
+                </div>
+                <!-- Results Modal -->
+                <div class="modal" id="resultsModal">
+                <div class="modal-content">
+                    <h2 class="modal-title">النتيجة</h2>
+                    <div class="result-stats">
+                        <div class="result-stat">
+                            <div class="result-value" id="finalWpm">0</div>
+                            <div class="result-label">كلمات/الثانية</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="result-value" id="finalAccuracy">0%</div>
+                            <div class="result-label">الدقة</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="result-value" id="finalChars">0</div>
+                            <div class="result-label">عدد الحروف</div>
+                        </div>
+                        <div class="result-stat">
+                            <div class="result-value" id="finalErrors">0</div>
+                            <div class="result-label">الأخطاء</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="restartTest()">أعد المحاولة</button>
+                </div>
+                </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
